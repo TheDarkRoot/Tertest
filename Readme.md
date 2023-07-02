@@ -33,7 +33,7 @@ The author of this project is not responsible for any possible harm caused by th
 
 > ***Open the terminal and type following commands.***
 ```
-pkg install git -y;pkg install python2 -y;pkg install speedtest;pkg install speedtest-cli;pip install speedtest;pip install speedtest-cli
+pkg install git -y;pkg install python2 -y;pkg install speedtest;pip install termcolor speedtest-cli
 ```
 ```
 git clone https://github.com/TheDarkRoot/Tertest.git
