@@ -60,18 +60,18 @@ def print_speed(speed, unit):
 
 
 def run_speed_test():
-    print(colored("Bağlantı hızı testi başlatılıyor...", "blue"))
+    print(colored("The connection speed test is starting...", "blue"))
     print()
 
     try:
         st = speedtest.Speedtest()
         st.get_best_server()
 
-        print(colored("İndirme hızı:", "cyan"))
+        print(colored("Download:", "cyan"))
         download_speed = st.download() / 10 ** 6  # Convert to Mbps
         print_speed(download_speed, 'Mbps')
 
-        print(colored("\nYükleme hızı:", "cyan"))
+        print(colored("\nUpload:", "cyan"))
         upload_speed = st.upload() / 10 ** 6  # Convert to Mbps
         print_speed(upload_speed, 'Mbps')
 
@@ -80,10 +80,10 @@ def run_speed_test():
         print_speed(ping, 'ms')
 
         print()
-        print(colored("Bağlantı hızı testi tamamlandı.", "green"))
+        print(colored("The connection speed test is complete.\n", "green"))
 
     except speedtest.SpeedtestException:
-        print(colored("Hız testi yapılırken bir hata oluştu.", "red"))
+        print(colored("An error occurred while performing the speed test\n", "red"))
 
 
 if __name__ == "__main__":
